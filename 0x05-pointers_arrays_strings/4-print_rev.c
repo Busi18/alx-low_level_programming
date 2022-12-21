@@ -3,23 +3,19 @@
 
 /**
  * print_rev - Prints a string in reverse
- * @s : The string to print
  *
- * Return: void
+ * @s: string parameter
+ * Return: no value
  */
 void print_rev(char *s)
 {
-	int c = 0;
+	int rev = strlen(s);
+	int j = rev - 1;
 
-	while (s[c] != '\0')
+	while (j >= 0)
 	{
-		c++;
+		_putchar(s[j]);
+		j--;
 	}
-
-	for (c -= 1; c >= 0; c--)
-	{
-		_putchar(s[c]);
-	}
-
 	_putchar('\n');
 }
