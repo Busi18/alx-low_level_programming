@@ -1,10 +1,21 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void *malloc_checked(unsigned int b);
-char *string_nconcat(char *s1, char *s2, unsigned int n);
-void *_calloc(unsigned int nmemb, unsigned int size);
-int *array_range(int min, int max);
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
+/**
+ * malloc_checked - function that allocates memory using malloc
+ * @b: bytes allocate
+ * Return: pointer
+ */
 
-#endif
+void *malloc_checked(unsigned int b)
+{
+	void *ptr;
+
+	ptr = malloc(b);
+	if (ptr == NULL)
+	{
+		exit(98);
+	}
+	return (ptr);
+}
